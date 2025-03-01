@@ -49,6 +49,8 @@ The project includes **end-to-end (E2E) tests** to verify the functionality of:
 
 We are using **E2E testing** to ensure full functionality and interaction coverage.  
 
+
+
 Tests are located in:  
 📁 `tests/hierarchical-table.spec.ts`  
 
@@ -57,12 +59,16 @@ Run tests with:
 npx playwright test
 ```
 
+Test report:[test.pdf](https://github.com/user-attachments/files/19039096/test.pdf)
+
+
 ---
 
 ## **Folder Structure**  
 
 ```
-📦 src
+📦 src[Uploading test.pdf…]()
+
  ┣ 📂 components
  ┃ ┣ 📜 button.tsx
  ┃ ┗ 📜 input.tsx
