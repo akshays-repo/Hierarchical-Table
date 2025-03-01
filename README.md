@@ -1,5 +1,7 @@
 # Hierarchical Table
 
+[Live Demo](https://hierarchical-table-mauve.vercel.app/)
+
 ## Overview  
 The **Hierarchical Table** project is a **React-based** application that displays structured data in a table format with **parent-child relationships**. It allows users to dynamically update values, and changes in child rows automatically update the corresponding parent values. Additionally, the system calculates and displays **variance percentages** to track differences between the original and updated values.
 
