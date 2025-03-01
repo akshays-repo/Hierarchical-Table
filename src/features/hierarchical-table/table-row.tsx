@@ -47,10 +47,12 @@ const TableRow: FC<TableRowProps> = ({ row, level, parentPath }) => {
 
     const currentPath = [...parentPath, row.id];
 
+    const elementId = row.label.toLowerCase()
+
     return (
         <>
             <tr className={level % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                <td className="py-3 px-4 border-t border-gray-200">
+                <td className="px-4 py-3 border-t border-gray-200" id={`${elementId}`}>
                     <div className="flex items-center">
                         <span className="ml-2" style={{ marginLeft: `${level * 20}px` }}>
                             {level > 0 && "-- "}
@@ -58,39 +60,39 @@ const TableRow: FC<TableRowProps> = ({ row, level, parentPath }) => {
                         </span>
                     </div>
                 </td>
-                <td className="py-3 px-4 border-t border-gray-200">
+                <td className="px-4 py-3 border-t border-gray-200" id={`${elementId}-value`}>
                     {row.value.toFixed(2)}
                 </td>
-                <td className="py-3 px-4 border-t border-gray-200">
+                <td className="px-4 py-3 border-t border-gray-200">
                     <Input
                         type="text"
                         value={inputValue}
                         onChange={handleInputChange}
                         placeholder="Enter value"
-                        name={row.label}
+                        id={`${elementId}-input`}
                     />
                 </td>
-                <td className="py-3 px-4 border-t border-gray-200">
+                <td className="px-4 py-3 border-t border-gray-200">
                     <Button
                         variant='primary'
                         onClick={handleAllocationPercentage}
-                        id={`${row.label}-allocation-percentage`}
+                        id={`${elementId}-allocation-percentage`}
 
                     >
                         Allocation %
                     </Button>
                 </td>
-                <td className="py-3 px-4 border-t border-gray-200">
+                <td className="px-4 py-3 border-t border-gray-200">
                     <Button
                         variant='secondary'
                         onClick={handleAllocationValue}
-                        id={`${row.label}-allocation-value`}
+                        id={`${row.label.toLowerCase()}-allocation-value`}
 
                     >
                         Allocation Val
                     </Button>
                 </td>
-                <td className="py-3 px-4 border-t border-gray-200">
+                <td className="px-4 py-3 border-t border-gray-200" id={`${elementId}-variance`}>
                     {variancePercentage.toFixed(2)}%
                 </td>
             </tr>
